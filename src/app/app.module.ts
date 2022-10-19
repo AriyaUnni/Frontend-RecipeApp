@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddrecipeComponent } from './addrecipe/addrecipe.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ViewrecipeComponent } from './viewrecipe/viewrecipe.component';
 
 const appRoutes:Routes=[
   {
@@ -18,7 +19,8 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     NavbarComponent,
-    AddrecipeComponent
+    AddrecipeComponent,
+    ViewrecipeComponent
   ],
   imports: [
     BrowserModule,
