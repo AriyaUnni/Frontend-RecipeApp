@@ -6,10 +6,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Add Recipe</a>
-          <a class="nav-link" href="#">View Recipe</a>
+          <a class="nav-link active" aria-current="page" routerLink="/">Add Recipe</a>
+          <a class="nav-link active" routerLink="/view">View Recipe</a>
          
         </div>
       </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
     </div>
   </nav>

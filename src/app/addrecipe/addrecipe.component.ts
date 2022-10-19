@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-addrecipe',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddrecipeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
 
   recipeName=""
   type=""
   description=""
   postedDate=""
+
+  status:boolean=false
 
   readValues=()=>{
     let data={
@@ -23,6 +26,22 @@ export class AddrecipeComponent implements OnInit {
     }
 
     console.log(data)
+
+    this.myapi.addRecipe(data).subscribe(
+      (response)=>{
+        console.log(response)
+        alert("Successfully added")
+      }
+    )
+
+    this.recipeName=""
+    this.type=""
+    this.description=""
+    this.postedDate=""
+
+    this.status=true
+
+    
   }
 
   ngOnInit(): void {
